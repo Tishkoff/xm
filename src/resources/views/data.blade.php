@@ -5,6 +5,10 @@
         <title>XM PHP Exercise - v21.0.5</title>
     </head>
     <body class="antialiased">
+    @if (!count($prices->all()))
+        <h2>No Historical Data Found</h2>
+        <p><a href="/">Try With Other Parameters</a></p>
+    @else
         <table>
             <thead>
             <tr>
@@ -53,5 +57,6 @@
                 },
             });
         </script>
+        @endif
     </body>
 </html>
